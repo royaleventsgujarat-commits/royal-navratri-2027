@@ -122,11 +122,38 @@ footer{padding:28px 0;text-align:center;color:#8c806b;font:10px Arial,sans-serif
 <h2>Be Part of the Legacy.</h2>
 <p class="copy">We welcome brands and organisations who share our vision for a memorable cultural celebration. Join us in creating meaningful connections with audiences across Jamnagar and Gujarat.</p>
 <div class="line"></div>
-<a class="btn" href="mailto:royalnavratri2027@gmail.com?subject=Royal%20Navratri%202027%20Partnership">Enquire About Partnerships</a>
+
+<a class="btn" href="javascript:void(0)" onclick="sendEmail()">Enquire About Partnerships — Email</a>
+
+<a class="btn" href="javascript:void(0)" onclick="sendWhatsApp()" style="margin-left:10px;">Enquire on WhatsApp</a>
+
 <p class="note">Please replace the placeholder email address with your official event email before publishing.</p>
 </div>
 </section>
 </main>
 <footer>ROYAL NAVRATRI 2027 · JAMNAGAR, GUJARAT</footer>
+  
+<script>
+function sendWhatsApp() {
+  const message = encodeURIComponent(
+    "Hello Royal Navratri 2027! I want to enquire about your event."
+  );
+  window.open(
+    "https://wa.me/?text=" + message,
+    "_blank"
+  );
+}
+
+function sendEmail() {
+  window.location.href =
+    "mailto:royaleventsgujarat@gmail.com?subject=" +
+    encodeURIComponent("Royal Navratri 2027 Enquiry") +
+    "&body=" +
+    encodeURIComponent(
+      "Hello Royal Navratri Team,\n\nI would like to enquire about Royal Navratri 2027.\n\nName:\nMobile Number:\nEnquiry:\n\nThank you."
+    );
+}
+</script>
+
 </body>
 </html>
