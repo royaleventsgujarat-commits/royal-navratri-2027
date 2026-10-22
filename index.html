@@ -330,6 +330,117 @@ footer {
     transition: none;
   }
 }
+  
+/* Royal Navratri Ticket Booking */
+.tickets-section {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #080706, #171109, #080706);
+  text-align: center;
+}
+
+.section-heading {
+  margin-bottom: 42px;
+}
+
+.eyebrow,
+.ticket-label {
+  color: #dfbd72;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.section-heading h2 {
+  color: #fff0c2;
+  font-size: clamp(32px, 5vw, 48px);
+  margin: 12px 0;
+}
+
+.section-heading h2 span {
+  color: #dfbd72;
+}
+
+.section-heading > p:last-child,
+.ticket-card > p:not(.ticket-label) {
+  color: #c1b59e;
+  line-height: 1.7;
+}
+
+.ticket-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ticket-card {
+  padding: 32px 22px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(223, 189, 114, 0.35);
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ticket-card h3 {
+  color: #fff0c2;
+  font-size: 23px;
+  margin: 18px 0 12px;
+}
+
+.ticket-card.featured {
+  border-color: #dfbd72;
+  box-shadow: 0 0 24px rgba(223, 189, 114, 0.12);
+}
+
+.ticket-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(223, 189, 114, 0.13);
+}
+
+.ticket-price {
+  color: #dfbd72 !important;
+  font-size: 21px;
+  font-weight: 700;
+  margin: 24px 0;
+}
+
+.ticket-price span {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.ticket-card .btn {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+.ticket-note {
+  max-width: 700px;
+  margin: 32px auto 0;
+  color: #c1b59e;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+@media (max-width: 750px) {
+  .ticket-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+
+  .tickets-section {
+    padding: 55px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticket-card {
+    transition: none;
+  }
+}
+
 </style>
 </head>
 
@@ -469,6 +580,43 @@ footer {
     </div>
     <p class="note" id="countdown-message" aria-live="polite">Counting down to 30 September 2027.</p>
   </div>
+  
+<section id="tickets" class="tickets-section">
+  <div class="section-heading">
+    <p class="eyebrow">YOUR ROYAL EVENING AWAITS</p>
+    <h2>Ticket <span>Booking</span></h2>
+    <p>Be part of the Royal Navratri 2027 experience.</p>
+  </div>
+
+  <div class="ticket-grid">
+    <div class="ticket-card">
+      <p class="ticket-label">PRE NAVRATRI</p>
+      <h3>Opening Celebration</h3>
+      <p>27–29 September 2027</p>
+      <p class="ticket-price">Price to be announced</p>
+      <a class="btn" href="mailto:royaleventsgujarat@gmail.com?subject=Pre%20Navratri%20Ticket%20Enquiry">Enquire Now</a>
+    </div>
+
+    <div class="ticket-card featured">
+      <p class="ticket-label">THE MAIN EVENT</p>
+      <h3>Royal Navratri</h3>
+      <p>30 September – 8 October 2027</p>
+      <p class="ticket-price">₹700 <span>/ night</span></p>
+      <a class="btn" href="mailto:royaleventsgujarat@gmail.com?subject=Main%20Navratri%20Ticket%20Enquiry">Enquire Now</a>
+    </div>
+
+    <div class="ticket-card">
+      <p class="ticket-label">POST NAVRATRI</p>
+      <h3>Closing Celebration</h3>
+      <p>9–11 October 2027</p>
+      <p class="ticket-price">Price to be announced</p>
+      <a class="btn" href="mailto:royaleventsgujarat@gmail.com?subject=Post%20Navratri%20Ticket%20Enquiry">Enquire Now</a>
+    </div>
+  </div>
+
+  <p class="ticket-note">
+    Online booking and payment options will be announced once officially available.
+  </p>
 </section>
 </main>
 
