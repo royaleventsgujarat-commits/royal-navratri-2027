@@ -198,6 +198,44 @@ function sendEmail() {
     );
 }
 </script>
+<!-- Royal Navratri Countdown -->
+<div id="royal-countdown" style="text-align:center; color:#d4af37; padding:25px 10px; font-family:Arial,sans-serif;">
+  <h2 style="letter-spacing:3px;">THE ROYAL COUNTDOWN</h2>
+  <p>Royal Navratri 2027</p>
+  <div id="countdown-timer" style="font-size:24px; font-weight:bold;">
+    Loading...
+  </div>
+</div>
 
+<script>
+(function () {
+  const eventDate = new Date("2027-09-30T00:00:00+05:30").getTime();
+  const timer = document.getElementById("countdown-timer");
+
+  function updateCountdown() {
+    const now = Date.now();
+    const distance = eventDate - now;
+
+    if (distance <= 0) {
+      timer.textContent = "THE ROYAL CELEBRATION IS HERE!";
+      return;
+    }
+
+    const days = Math.floor(distance / 86400000);
+    const hours = Math.floor((distance % 86400000) / 3600000);
+    const minutes = Math.floor((distance % 3600000) / 60000);
+    const seconds = Math.floor((distance % 60000) / 1000);
+
+    timer.textContent =
+      days + " DAYS  " +
+      hours + " HRS  " +
+      minutes + " MIN  " +
+      seconds + " SEC";
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+})();
+</script>
 </body>
 </html>
