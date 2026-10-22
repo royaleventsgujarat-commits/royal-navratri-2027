@@ -284,6 +284,52 @@ footer {
   html { scroll-behavior: auto; }
   *, *:before, *:after { transition: none !important; }
 }
+  /* Royal gold animation */
+.hero h1 {
+  animation: royalGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes royalGlow {
+  from {
+    text-shadow: 0 0 5px rgba(223, 189, 114, 0.2);
+  }
+  to {
+    text-shadow: 0 0 18px rgba(223, 189, 114, 0.65),
+                 0 0 32px rgba(223, 189, 114, 0.25);
+  }
+}
+
+.btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(223, 189, 114, 0.3);
+}
+
+.date-card,
+.organiser-card {
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.date-card:hover,
+.organiser-card:hover {
+  transform: translateY(-5px);
+  border-color: #dfbd72;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero h1 {
+    animation: none;
+  }
+
+  .btn,
+  .date-card,
+  .organiser-card {
+    transition: none;
+  }
+}
 </style>
 </head>
 
