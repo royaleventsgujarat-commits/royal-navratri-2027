@@ -1,721 +1,426 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080706">
 <title>Royal Navratri 2027 | Jamnagar</title>
-<meta name="description" content="Discover Royal Navratri 2027 in Jamnagar, Gujarat — a royal celebration of culture, devotion and garba.">
+<meta name="description" content="Royal Navratri 2027 — a royal celebration of Garba, culture and devotion in Jamnagar, Gujarat.">
 
 <style>
 :root {
   --gold: #dfbd72;
-  --gold-light: #fff0c2;
+  --bright: #f4d995;
+  --pale: #fff0c2;
   --black: #080706;
-  --panel: #151109;
   --muted: #c1b59e;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
+  margin: 0;
   background: var(--black);
   color: #fff7e8;
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.7;
+  overflow-x: hidden;
 }
 a { color: inherit; text-decoration: none; }
 .wrap { width: min(1120px, 90%); margin: auto; }
-
+header {
+  background: rgba(8,7,6,.97);
+  border-bottom: 1px solid rgba(223,189,114,.35);
+}
 nav {
+  min-height: 85px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
-  padding: 16px 0;
-  border-bottom: 1px solid #dfbd7240;
+  flex-wrap: wrap;
+  padding: 12px 0;
 }
-.brand img { height: 72px; width: auto; display: block; }
+.brand img { height: 62px; width: auto; object-fit: contain; }
 .navlinks {
-  display: flex; flex-wrap: wrap; gap: 22px;
-  font: 11px Arial, sans-serif; letter-spacing: 1.5px;
+  display: flex;
+  gap: 10px 20px;
+  flex-wrap: wrap;
+  font: 10px Arial, sans-serif;
+  letter-spacing: 1.3px;
 }
-.navlinks a { transition: color .3s; }
 .navlinks a:hover { color: var(--gold); }
-
 .hero {
   min-height: 82vh;
   display: grid;
   place-items: center;
   text-align: center;
+  padding: 85px 18px;
   position: relative;
-  overflow: hidden;
-  padding: 85px 15px;
   background:
-    radial-gradient(ellipse at 50% 35%, #78521e40, transparent 55%),
-    radial-gradient(ellipse at 50% 100%, #8a5a1830, transparent 60%),
-    linear-gradient(180deg, #0b0906, #100c07 65%, #080706);
+    radial-gradient(ellipse at top, rgba(151,101,31,.28), transparent 55%),
+    linear-gradient(180deg,#100c07,#080706);
 }
-.hero:after {
+.hero:before {
   content: "";
   position: absolute;
-  inset: 14px;
-  border: 1px solid #dfbd7230;
+  inset: 15px;
+  border: 1px solid rgba(223,189,114,.3);
   pointer-events: none;
 }
-.arch {
-  position: absolute;
-  top: 34px; left: 50%;
-  transform: translateX(-50%);
-  width: min(520px, 88vw);
-  height: 440px;
-  border: 1px solid #dfbd7260;
-  border-bottom: 0;
-  border-radius: 260px 260px 0 0;
-  pointer-events: none;
-}
-.arch:before {
-  content: "";
-  position: absolute;
-  inset: 17px 17px 0;
-  border: 1px solid #dfbd7238;
-  border-bottom: 0;
-  border-radius: 240px 240px 0 0;
-}
-.hero-content { position: relative; z-index: 1; }
-.eyebrow, .section-label {
+.hero-content { max-width: 850px; position: relative; }
+.eyebrow,.label {
   color: var(--gold);
-  font: 11px Arial, sans-serif;
+  font: 10px Arial,sans-serif;
   letter-spacing: 4px;
   text-transform: uppercase;
 }
-.eyebrow { margin-bottom: 25px; }
 h1 {
-  font-size: clamp(46px, 9vw, 100px);
-  font-weight: normal;
+  color: var(--pale);
+  font-size: clamp(46px,9vw,100px);
   line-height: 1;
-  letter-spacing: 3px;
-  color: var(--gold-light);
-  text-shadow: 0 0 35px #dfbd7230;
+  font-weight: 400;
+  letter-spacing: 4px;
+  margin: 20px 0;
+  animation: glow 4s ease-in-out infinite alternate;
 }
 h1 span {
   display: block;
   color: var(--gold);
+  font-size: .62em;
   font-style: italic;
-  font-size: .66em;
-  letter-spacing: 6px;
-  margin-top: 15px;
+  margin-top: 12px;
 }
-.year {
-  display: block;
-  margin-top: 25px;
-  font-size: 20px;
-  letter-spacing: 9px;
-  color: var(--gold-light);
-}
-.intro {
-  max-width: 600px;
-  margin: 28px auto;
-  color: #d6c9b1;
-  font-size: 17px;
-}
-.dates {
+.year { color: var(--pale); letter-spacing: 8px; font-size: 20px; }
+.intro { max-width: 620px; margin: 25px auto; color: #d6c9b1; }
+.dates-line {
   color: var(--gold);
-  font: 12px Arial, sans-serif;
+  font: 11px Arial,sans-serif;
   letter-spacing: 2px;
   margin: 25px 0;
 }
+.buttons { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 .btn {
-  display: inline-block;
-  padding: 13px 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--gold);
-  color: var(--gold-light);
-  background: #0a0805;
-  font: 11px Arial, sans-serif;
-  letter-spacing: 1.5px;
+  padding: 13px 20px;
+  color: var(--pale);
+  background: #100b04;
+  font: 10px Arial,sans-serif;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
-  transition: .3s;
-  cursor: pointer;
+  transition: .25s;
 }
-.btn:hover {
-  background: var(--gold);
-  color: #100b04;
-  box-shadow: 0 0 25px #dfbd7230;
-}
-section { padding: 82px 0; }
-.section-label { text-align: center; }
+.btn:hover { background: var(--gold); color: #100b04; transform: translateY(-3px); }
+section { padding: 75px 0; }
+.label { text-align: center; margin: 0; }
 h2 {
   text-align: center;
-  font-size: clamp(30px, 5vw, 48px);
-  font-weight: normal;
+  color: var(--pale);
+  font-size: clamp(30px,5vw,46px);
+  font-weight: 400;
+  line-height: 1.2;
   margin: 12px 0 20px;
-  color: var(--gold-light);
 }
-.copy {
-  max-width: 740px;
-  margin: auto;
-  text-align: center;
-  color: var(--muted);
-  font-size: 16px;
-}
-.line {
-  width: 65px; height: 1px;
-  background: var(--gold);
-  margin: 26px auto;
-  box-shadow: 0 0 12px #dfbd7260;
-}
-.date-grid {
+.line { width: 60px; height: 1px; background: var(--gold); margin: 25px auto; }
+.copy { max-width: 760px; margin: auto; text-align: center; color: var(--muted); }
+.cards {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3,minmax(0,1fr));
   gap: 18px;
-  margin-top: 38px;
+  margin-top: 35px;
 }
-.date-card {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #dfbd7250;
-  padding: 30px 20px;
+.card {
+  border: 1px solid rgba(223,189,114,.35);
+  background: linear-gradient(145deg,#21190d,#0b0907);
+  padding: 28px 20px;
   text-align: center;
-  background: linear-gradient(145deg, #21190d, #0b0907 75%);
-  transition: transform .3s, border-color .3s;
+  transition: .3s;
 }
-.date-card:before {
-  content: "✦";
-  display: block;
+.card:hover { transform: translateY(-5px); border-color: var(--gold); }
+.card:before { content: "✦"; display: block; color: var(--gold); font-size: 19px; }
+.card small {
   color: var(--gold);
-  font-size: 18px;
-  margin-bottom: 12px;
-}
-.date-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--gold);
-}
-.date-card small {
-  color: var(--gold);
-  font: 10px Arial, sans-serif;
+  font: 10px Arial,sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-.date-card h3 { font-size: 23px; font-weight: normal; margin: 12px 0; }
-.date-card p { font: 12px Arial, sans-serif; color: var(--muted); }
-.note {
-  font: 11px Arial, sans-serif;
-  color: #a89a80;
+.card h3 { color: var(--pale); font-size: 21px; font-weight: 400; margin: 12px 0; }
+.card p { color: var(--muted); font: 12px/1.8 Arial,sans-serif; margin: 5px 0; }
+.note { text-align: center; color: #a89a80; font: 11px/1.7 Arial,sans-serif; margin-top: 22px; }
+.team .card h3 { font-size: 17px; overflow-wrap: anywhere; }
+.partners {
+  background: linear-gradient(180deg,#100d08,#211707,#090806);
+  border-block: 1px solid rgba(223,189,114,.25);
   text-align: center;
-  margin-top: 22px;
 }
-.team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.team-grid .date-card h3 { font-size: 19px; overflow-wrap: anywhere; }
-.sponsor {
-  background: linear-gradient(180deg, #100d08, #211707, #090806);
+.partners .btn { margin: 6px; }
+.countdown {
   text-align: center;
-  border-top: 1px solid #dfbd7240;
-  border-bottom: 1px solid #dfbd7240;
+  padding: 65px 18px;
+  background: linear-gradient(145deg,#171108,#080706);
+  border-block: 1px solid rgba(223,189,114,.3);
 }
-.sponsor .btn { margin: 8px 5px; }
-#royal-countdown {
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  padding: 55px 18px;
-  background:
-    radial-gradient(ellipse at top, #5b401b45, transparent 65%),
-    linear-gradient(145deg, #171108, #080706);
-  border-top: 1px solid #dfbd7250;
-  border-bottom: 1px solid #dfbd7250;
-}
-#royal-countdown h2 {
-  font-size: clamp(25px, 5vw, 42px);
-  letter-spacing: 3px;
-}
-.countdown-subtitle {
-  color: var(--muted);
-  font: 11px Arial, sans-serif;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-.timer-grid {
+.timer {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4,minmax(0,1fr));
   gap: 12px;
   max-width: 700px;
-  margin: 30px auto 0;
+  margin: 30px auto;
 }
-.timer-card {
-  border: 1px solid #dfbd7270;
-  background: linear-gradient(145deg, #21190d, #0b0907);
-  padding: 20px 8px;
-  box-shadow: inset 0 0 20px #dfbd7208;
+.timer-card { border: 1px solid var(--gold); padding: 18px 6px; }
+.number { display: block; color: var(--pale); font-size: clamp(24px,5vw,40px); }
+.unit { color: var(--gold); font: 9px Arial,sans-serif; letter-spacing: 2px; }
+.tickets { background: linear-gradient(180deg,#080706,#171109,#080706); text-align: center; }
+.ticket-card {
+  border: 1px solid rgba(223,189,114,.35);
+  border-radius: 10px;
+  padding: 30px 18px;
+  background: rgba(255,255,255,.025);
 }
-.timer-number {
-  display: block;
-  color: var(--gold-light);
-  font-size: clamp(24px, 5vw, 42px);
-  line-height: 1.3;
-  font-variant-numeric: tabular-nums;
+.ticket-card.featured {
+  border-color: var(--gold);
+  background: linear-gradient(145deg,#2c200d,#0c0a07);
 }
-.timer-label {
-  display: block;
-  color: var(--gold);
-  font: 10px Arial, sans-serif;
-  letter-spacing: 2px;
-  margin-top: 8px;
-}
+.ticket-label { color: var(--gold); font: bold 10px Arial,sans-serif; letter-spacing: 2px; }
+.ticket-card h3 { color: var(--pale); font-size: 23px; font-weight: 400; }
+.ticket-card p { color: var(--muted); }
+.price { color: var(--gold)!important; font-size: 23px; font-weight: bold; }
+.price span { font-size: 12px; font-weight: normal; }
+.coming { cursor: default; opacity: .85; }
 footer {
-  padding: 30px 0;
+  padding: 28px 0;
   text-align: center;
   color: #a89a80;
-  font: 10px Arial, sans-serif;
+  font: 10px Arial,sans-serif;
   letter-spacing: 2px;
+  border-top: 1px solid rgba(223,189,114,.2);
 }
-@media (max-width: 650px) {
-  nav { align-items: center; }
+@keyframes glow {
+  from { text-shadow: 0 0 5px rgba(223,189,114,.15); }
+  to { text-shadow: 0 0 22px rgba(223,189,114,.5); }
+}
+@media(max-width:750px) {
+  nav { justify-content: center; }
   .brand img { height: 52px; }
-  .navlinks { gap: 10px; font-size: 9px; letter-spacing: .5px; }
-  .hero { min-height: 70vh; padding: 65px 12px; }
-  .eyebrow { letter-spacing: 2px; }
-  .intro { font-size: 15px; }
-  section { padding: 60px 0; }
-  .date-grid, .team-grid { grid-template-columns: 1fr; }
-  .timer-grid { gap: 7px; }
-  .timer-card { padding: 16px 3px; }
-  .timer-label { font-size: 8px; letter-spacing: 1px; }
+  .navlinks { justify-content: center; gap: 8px 13px; }
+  .cards { grid-template-columns: 1fr; max-width: 460px; margin-inline: auto; }
+  .hero { min-height: 70vh; }
+  section { padding: 58px 0; }
+  .timer { gap: 6px; }
+  .unit { font-size: 8px; letter-spacing: 1px; }
 }
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *:before, *:after { transition: none !important; }
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after { animation: none!important; scroll-behavior: auto!important; transition: none!important; }
 }
-  /* Royal gold animation */
-.hero h1 {
-  animation: royalGlow 3s ease-in-out infinite alternate;
-}
-
-@keyframes royalGlow {
-  from {
-    text-shadow: 0 0 5px rgba(223, 189, 114, 0.2);
-  }
-  to {
-    text-shadow: 0 0 18px rgba(223, 189, 114, 0.65),
-                 0 0 32px rgba(223, 189, 114, 0.25);
-  }
-}
-
-.btn {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 18px rgba(223, 189, 114, 0.3);
-}
-
-.date-card,
-.organiser-card {
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.date-card:hover,
-.organiser-card:hover {
-  transform: translateY(-5px);
-  border-color: #dfbd72;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero h1 {
-    animation: none;
-  }
-
-  .btn,
-  .date-card,
-  .organiser-card {
-    transition: none;
-  }
-}
-  
-/* Royal Navratri Ticket Booking */
-.tickets-section {
-  padding: 80px 20px;
-  background: linear-gradient(180deg, #080706, #171109, #080706);
-  text-align: center;
-}
-
-.section-heading {
-  margin-bottom: 42px;
-}
-
-.eyebrow,
-.ticket-label {
-  color: #dfbd72;
-  letter-spacing: 3px;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.section-heading h2 {
-  color: #fff0c2;
-  font-size: clamp(32px, 5vw, 48px);
-  margin: 12px 0;
-}
-
-.section-heading h2 span {
-  color: #dfbd72;
-}
-
-.section-heading > p:last-child,
-.ticket-card > p:not(.ticket-label) {
-  color: #c1b59e;
-  line-height: 1.7;
-}
-
-.ticket-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.ticket-card {
-  padding: 32px 22px;
-  background: rgba(255, 255, 255, 0.035);
-  border: 1px solid rgba(223, 189, 114, 0.35);
-  border-radius: 16px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.ticket-card h3 {
-  color: #fff0c2;
-  font-size: 23px;
-  margin: 18px 0 12px;
-}
-
-.ticket-card.featured {
-  border-color: #dfbd72;
-  box-shadow: 0 0 24px rgba(223, 189, 114, 0.12);
-}
-
-.ticket-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(223, 189, 114, 0.13);
-}
-
-.ticket-price {
-  color: #dfbd72 !important;
-  font-size: 21px;
-  font-weight: 700;
-  margin: 24px 0;
-}
-
-.ticket-price span {
-  font-size: 13px;
-  font-weight: 400;
-}
-
-.ticket-card .btn {
-  display: inline-block;
-  text-decoration: none;
-  margin-top: 8px;
-}
-
-.ticket-note {
-  max-width: 700px;
-  margin: 32px auto 0;
-  color: #c1b59e;
-  font-size: 13px;
-  line-height: 1.7;
-}
-
-@media (max-width: 750px) {
-  .ticket-grid {
-    grid-template-columns: 1fr;
-    max-width: 420px;
-  }
-
-  .tickets-section {
-    padding: 55px 16px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ticket-card {
-    transition: none;
-  }
-}
-
-/* Royal Cinematic Scroll Reveal */
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition:
-    opacity 0.8s ease,
-    transform 0.8s ease;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}
-
 </style>
 </head>
 
 <body>
-<header class="wrap">
-  <nav>
-    <a class="brand" href="#" aria-label="Royal Navratri home">
-      <img src="ChatGPT%20Image%20Oct%204,%202026%20at%2005_42_58%20PM.png"
-           alt="Royal Navratri 2027 Logo">
-    </a>
-    <div class="navlinks">
-      <a href="#about">OUR VISION</a>
-      <a href="#dates">DATES</a>
-      <a href="#organisers">TEAM</a>
-      <a href="#partners">PARTNERS</a>
-    </div>
-  </nav>
+<header>
+  <div class="wrap">
+    <nav aria-label="Main navigation">
+      <a class="brand" href="#" aria-label="Royal Navratri home">
+        <img src="ChatGPT%20Image%20Oct%204,%202026%20at%2005_42_58%20PM.png" alt="Royal Navratri 2027 Logo">
+      </a>
+      <div class="navlinks">
+        <a href="#about">OUR VISION</a>
+        <a href="#dates">DATES</a>
+        <a href="#organisers">TEAM</a>
+        <a href="#partners">PARTNERS</a>
+        <a href="#tickets">TICKETS</a>
+      </div>
+    </nav>
+  </div>
 </header>
 
 <main>
-<section class="hero">
-  <div class="arch"></div>
-  <div class="hero-content">
-    <p class="eyebrow">Jamnagar · Gujarat · 2027</p>
-    <h1>ROYAL<span>NAVRATRI</span></h1>
-    <span class="year">✦ 2027 ✦</span>
-    <p class="intro">Nine nights. One royal celebration. A timeless spirit of devotion, culture and togetherness.</p>
-    <p class="dates">30 SEPTEMBER — 8 OCTOBER 2027</p>
-    <a class="btn" href="#about">Discover the celebration</a>
-  </div>
-</section>
-
-<section id="about">
-  <div class="wrap">
-    <p class="section-label">The Royal Experience</p>
-    <h2>Tradition, Reimagined.</h2>
-    <div class="line"></div>
-    <p class="copy">Royal Navratri brings the vibrant spirit of Gujarat to life through music, garba and a shared celebration of culture. We are building an unforgettable gathering in Jamnagar, bringing people, communities and brands together for a remarkable festive experience.</p>
-  </div>
-</section>
-
-<section id="dates">
-  <div class="wrap">
-    <p class="section-label">Mark Your Calendar</p>
-    <h2>The Celebration</h2>
-    <div class="line"></div>
-    <div class="date-grid">
-      <article class="date-card">
-        <small>Before the Festival</small>
-        <h3>Pre Royal Navratri</h3>
-        <p>27 — 29 September 2027</p>
-      </article>
-      <article class="date-card">
-        <small>The Main Celebration</small>
-        <h3>Royal Navratri</h3>
-        <p>30 September — 8 October 2027</p>
-      </article>
-      <article class="date-card">
-        <small>After the Festival</small>
-        <h3>Post Royal Navratri</h3>
-        <p>9 — 11 October 2027</p>
-      </article>
-    </div>
-    <p class="note">Dates and programme are subject to official confirmation and required permissions.</p>
-  </div>
-</section>
-
-<section id="organisers">
-  <div class="wrap">
-    <p class="section-label">The People Behind the Vision</p>
-    <h2>Meet the Organising Team</h2>
-    <div class="line"></div>
-    <div class="date-grid team-grid">
-      <article class="date-card">
-        <small>Main Organiser</small>
-        <h3>Dushyantsinh Jadeja</h3>
-        <p>8866855030</p>
-      </article>
-      <article class="date-card">
-        <h3>Parthrajsinh Jadeja</h3>
-        <p>9409426269</p>
-      </article>
-      <article class="date-card">
-        <h3>Dhruv Aswar</h3>
-        <p>8238673567</p>
-      </article>
-      <article class="date-card">
-        <h3>Het Hadiyal</h3>
-        <p>8160156453</p>
-      </article>
-      <article class="date-card">
-        <h3>Kartik Prajapati</h3>
-        <p>9727500939</p>
-      </article>
-      <article class="date-card">
-        <h3>Vaibhav Kevlani</h3>
-        <p>9510958341</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="sponsor" id="partners">
-  <div class="wrap">
-    <p class="section-label">A Partnership of Prestige</p>
-    <h2>Be Part of the Legacy.</h2>
-    <p class="copy">We welcome brands and organisations who share our vision for a memorable cultural celebration. Join us in creating meaningful connections with audiences across Jamnagar and Gujarat.</p>
-    <div class="line"></div>
-    <a class="btn" href="mailto:royaleventsgujarat@gmail.com?subject=Royal%20Navratri%202027%20Partnership%20Enquiry">Enquire About Partnerships — Email</a>
-    <a class="btn" href="https://wa.me/918866855030?text=Hello%20Royal%20Navratri%202027%21%20I%20want%20to%20enquire%20about%20your%20event." target="_blank" rel="noopener noreferrer">Enquire on WhatsApp</a>
-    
-<a class="btn" href="https://www.instagram.com/royalnavratri2027/" target="_blank" rel="noopener noreferrer">Follow Us on Instagram</a>
-
-    <p class="note">Partnerships and event arrangements are subject to confirmation.</p>
-  </div>
-</section>
-
-<section id="royal-countdown">
-  <div class="wrap">
-    <p class="section-label">The Royal Hour Approaches</p>
-    <h2>THE ROYAL COUNTDOWN</h2>
-    <p class="countdown-subtitle">Until the grand celebration begins</p>
-    <div class="timer-grid" aria-label="Countdown to Royal Navratri 2027">
-      <div class="timer-card">
-        <span class="timer-number" id="cd-days">---</span>
-        <span class="timer-label">DAYS</span>
-      </div>
-      <div class="timer-card">
-        <span class="timer-number" id="cd-hours">--</span>
-        <span class="timer-label">HOURS</span>
-      </div>
-      <div class="timer-card">
-        <span class="timer-number" id="cd-minutes">--</span>
-        <span class="timer-label">MINUTES</span>
-      </div>
-      <div class="timer-card">
-        <span class="timer-number" id="cd-seconds">--</span>
-        <span class="timer-label">SECONDS</span>
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Jamnagar · Gujarat · 2027</p>
+      <h1>ROYAL<span>NAVRATRI</span></h1>
+      <div class="year">✦ 2027 ✦</div>
+      <p class="intro">Nine nights. One royal celebration. A timeless spirit of devotion, culture and togetherness.</p>
+      <p class="dates-line">30 SEPTEMBER — 8 OCTOBER 2027</p>
+      <div class="buttons">
+        <a class="btn" href="#about">Discover the Celebration</a>
+        <a class="btn" href="#dates">Explore the Dates</a>
       </div>
     </div>
-    <p class="note" id="countdown-message" aria-live="polite">Counting down to 30 September 2027.</p>
-  </div>
-  
-<section id="tickets" class="tickets-section">
-  <div class="section-heading">
-    <p class="eyebrow">YOUR ROYAL EVENING AWAITS</p>
-    <h2>Ticket <span>Booking</span></h2>
-    <p>Be part of the Royal Navratri 2027 experience.</p>
-  </div>
+  </section>
 
-  <div class="ticket-grid">
-    <div class="ticket-card">
-      <p class="ticket-label">PRE NAVRATRI</p>
-      <h3>Opening Celebration</h3>
-      <p>27–29 September 2027</p>
-      <p class="ticket-price">Price to be announced</p>
-     <span class="btn" style="display:inline-block; opacity:0.85; cursor:default;">COMING SOON</span>
+  <section id="about">
+    <div class="wrap">
+      <p class="label">The Royal Experience</p>
+      <h2>Tradition, Reimagined.</h2>
+      <div class="line"></div>
+      <p class="copy">Royal Navratri brings the vibrant spirit of Gujarat to life through music, Garba and a shared celebration of culture. We are building an unforgettable gathering in Jamnagar, bringing people, communities and brands together for a remarkable festive experience.</p>
     </div>
+  </section>
 
-    <div class="ticket-card featured">
-      <p class="ticket-label">THE MAIN EVENT</p>
-      <h3>Royal Navratri</h3>
-      <p>30 September – 8 October 2027</p>
-      <p class="ticket-price">₹700 <span>/ night</span></p>
-     <span class="btn" style="display:inline-block; opacity:0.85; cursor:default;">COMING SOON</span>
+  <section id="dates">
+    <div class="wrap">
+      <p class="label">Mark Your Calendar</p>
+      <h2>The Celebration</h2>
+      <div class="line"></div>
+      <div class="cards">
+        <article class="card">
+          <small>Before the Festival</small>
+          <h3>Pre Royal Navratri</h3>
+          <p>27 — 29 September 2027</p>
+        </article>
+        <article class="card">
+          <small>The Main Celebration</small>
+          <h3>Royal Navratri</h3>
+          <p>30 September — 8 October 2027</p>
+        </article>
+        <article class="card">
+          <small>After the Festival</small>
+          <h3>Post Royal Navratri</h3>
+          <p>9 — 11 October 2027</p>
+        </article>
+      </div>
+      <p class="note">Dates and programme are subject to official confirmation and required permissions.</p>
     </div>
+  </section>
 
-    <div class="ticket-card">
-      <p class="ticket-label">POST NAVRATRI</p>
-      <h3>Closing Celebration</h3>
-      <p>9–11 October 2027</p>
-      <p class="ticket-price">Price to be announced</p>
-      <span class="btn" style="display:inline-block; opacity:0.85; cursor:default;">COMING SOON</span>
+  <section id="organisers" class="team">
+    <div class="wrap">
+      <p class="label">The People Behind the Vision</p>
+      <h2>Meet the Organising Team</h2>
+      <div class="line"></div>
+      <div class="cards">
+        <article class="card">
+          <small>Main Organiser</small>
+          <h3>Dushyantsinh Jadeja</h3>
+          <p>8866855030</p>
+        </article>
+        <article class="card">
+          <h3>Parthrajsinh Jadeja</h3>
+          <p>9409426269</p>
+        </article>
+        <article class="card">
+          <h3>Dhruv Aswar</h3>
+          <p>8238673567</p>
+        </article>
+        <article class="card">
+          <h3>Het Hadiyal</h3>
+          <p>8160156453</p>
+        </article>
+        <article class="card">
+          <h3>Kartik Prajapati</h3>
+          <p>9727500939</p>
+        </article>
+        <article class="card">
+          <h3>Vaibhav Kevlani</h3>
+          <p>9510958341</p>
+        </article>
+      </div>
     </div>
-  </div>
+  </section>
 
-  
-<div class="ticket-note">
-  <p style="color:#dfbd72; font-size:18px; font-weight:700; letter-spacing:1.5px;">
-    THE ROYAL EXPERIENCE AWAITS.
-  </p>
-  <p style="color:#fff0c2; font-size:15px; font-weight:600;">
-    TICKETS REVEALING SOON.
-  </p>
-  <p>Stay tuned for official ticket announcements.</p>
-</div>
+  <section id="partners" class="partners">
+    <div class="wrap">
+      <p class="label">A Partnership of Prestige</p>
+      <h2>Be Part of the Legacy.</h2>
+      <p class="copy">We welcome brands and organisations who share our vision for a memorable cultural celebration. Join us in creating meaningful connections with audiences across Jamnagar and Gujarat.</p>
+      <div class="line"></div>
+      <div class="buttons">
+        <a class="btn" href="mailto:royaleventsgujarat@gmail.com?subject=Royal%20Navratri%202027%20Partnership%20Enquiry">Enquire About Partnerships — Email</a>
+        <a class="btn" href="https://wa.me/918866855030?text=Hello%20Royal%20Navratri%202027%21%20I%20want%20to%20enquire%20about%20your%20event." target="_blank" rel="noopener noreferrer">Enquire on WhatsApp</a>
+        <a class="btn" href="https://www.instagram.com/royalnavratri2027/" target="_blank" rel="noopener noreferrer">Follow Us on Instagram</a>
+      </div>
+      <p class="note">Partnerships and event arrangements are subject to confirmation.</p>
+    </div>
+  </section>
 
-</section>
+  <section class="countdown" id="royal-countdown">
+    <div class="wrap">
+      <p class="label">The Royal Hour Approaches</p>
+      <h2>THE ROYAL COUNTDOWN</h2>
+      <p class="unit">UNTIL THE GRAND CELEBRATION BEGINS</p>
+      <div class="timer">
+        <div class="timer-card"><span class="number" id="days">---</span><span class="unit">DAYS</span></div>
+        <div class="timer-card"><span class="number" id="hours">--</span><span class="unit">HOURS</span></div>
+        <div class="timer-card"><span class="number" id="minutes">--</span><span class="unit">MINUTES</span></div>
+        <div class="timer-card"><span class="number" id="seconds">--</span><span class="unit">SECONDS</span></div>
+      </div>
+      <p class="note" id="countdown-message">Counting down to 30 September 2027.</p>
+    </div>
+  </section>
+
+  <section id="tickets" class="tickets">
+    <div class="wrap">
+      <p class="label">Your Royal Evening Awaits</p>
+      <h2>Ticket <span style="color:var(--gold)">Booking</span></h2>
+      <p class="copy">Be part of the Royal Navratri 2027 experience.</p>
+      <div class="cards">
+        <article class="ticket-card">
+          <p class="ticket-label">PRE NAVRATRI</p>
+          <h3>Opening Celebration</h3>
+          <p>27–29 September 2027</p>
+          <p class="price">Price to be announced</p>
+          <span class="btn coming">Coming Soon</span>
+        </article>
+        <article class="ticket-card featured">
+          <p class="ticket-label">THE MAIN EVENT</p>
+          <h3>Royal Navratri</h3>
+          <p>30 September – 8 October 2027</p>
+          <p class="price">₹700 <span>/ night</span></p>
+          <span class="btn coming">Coming Soon</span>
+        </article>
+        <article class="ticket-card">
+          <p class="ticket-label">POST NAVRATRI</p>
+          <h3>Closing Celebration</h3>
+          <p>9–11 October 2027</p>
+          <p class="price">Price to be announced</p>
+          <span class="btn coming">Coming Soon</span>
+        </article>
+      </div>
+      <div class="note">
+        <p style="color:var(--gold);font-size:16px;letter-spacing:1px">THE ROYAL EXPERIENCE AWAITS.</p>
+        <p style="color:var(--pale)">TICKETS REVEALING SOON.</p>
+        <p>Stay tuned for official ticket announcements.</p>
+      </div>
+    </div>
+  </section>
 </main>
 
-<footer>ROYAL NAVRATRI 2027 · JAMNAGAR, GUJARAT</footer>
+<footer>
+  <div class="wrap">ROYAL NAVRATRI 2027 · JAMNAGAR, GUJARAT</div>
+</footer>
 
 <script>
 (function () {
   const eventDate = new Date("2027-09-30T00:00:00+05:30").getTime();
-  const ids = {
-    days: document.getElementById("cd-days"),
-    hours: document.getElementById("cd-hours"),
-    minutes: document.getElementById("cd-minutes"),
-    seconds: document.getElementById("cd-seconds"),
-    message: document.getElementById("countdown-message")
-  };
 
   function updateCountdown() {
     const distance = eventDate - Date.now();
+    const days = document.getElementById("days");
+    const hours = document.getElementById("hours");
+    const minutes = document.getElementById("minutes");
+    const seconds = document.getElementById("seconds");
+    const message = document.getElementById("countdown-message");
 
     if (distance <= 0) {
-      ids.days.textContent = "00";
-      ids.hours.textContent = "00";
-      ids.minutes.textContent = "00";
-      ids.seconds.textContent = "00";
-      ids.message.textContent = "The royal celebration is here!";
+      days.textContent = "00";
+      hours.textContent = "00";
+      minutes.textContent = "00";
+      seconds.textContent = "00";
+      message.textContent = "The royal celebration is here!";
       return;
     }
 
-    ids.days.textContent = Math.floor(distance / 86400000);
-    ids.hours.textContent = String(Math.floor(distance % 86400000 / 3600000)).padStart(2, "0");
-    ids.minutes.textContent = String(Math.floor(distance % 3600000 / 60000)).padStart(2, "0");
-    ids.seconds.textContent = String(Math.floor(distance % 60000 / 1000)).padStart(2, "0");
+    days.textContent = Math.floor(distance / 86400000);
+    hours.textContent = String(Math.floor((distance % 86400000) / 3600000)).padStart(2, "0");
+    minutes.textContent = String(Math.floor((distance % 3600000) / 60000)).padStart(2, "0");
+    seconds.textContent = String(Math.floor((distance % 60000) / 1000)).padStart(2, "0");
   }
 
   updateCountdown();
-  setInterval(updateCountdown, 1000);
+  window.setInterval(updateCountdown, 1000);
 })();
 </script>
-  
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll(
-    "main section, .tickets-section"
-  );
-
-  sections.forEach(function (section) {
-    section.classList.add("reveal");
-  });
-
-  const observer = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
-
-  sections.forEach(function (section) {
-    observer.observe(section);
-  });
-});
-</script>
-
 </body>
 </html>
