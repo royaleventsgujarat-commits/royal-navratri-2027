@@ -45,7 +45,7 @@ nav {
   display: flex;
   gap: 10px 20px;
   flex-wrap: wrap;
-  font: 10px Arial, sans-serif;
+  font: 10px Arial,sans-serif;
   letter-spacing: 1.3px;
 }
 .navlinks a:hover { color: var(--gold); }
@@ -149,7 +149,14 @@ h2 {
 .card h3 { color: var(--pale); font-size: 21px; font-weight: 400; margin: 12px 0; }
 .card p { color: var(--muted); font: 12px/1.8 Arial,sans-serif; margin: 5px 0; }
 .note { text-align: center; color: #a89a80; font: 11px/1.7 Arial,sans-serif; margin-top: 22px; }
-.team .card h3 { font-size: 17px; overflow-wrap: anywhere; }
+
+.team .cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 850px;
+  margin-inline: auto;
+}
+.team .card h3 { font-size: 22px; overflow-wrap: anywhere; }
+
 .partners {
   background: linear-gradient(180deg,#100d08,#211707,#090806);
   border-block: 1px solid rgba(223,189,114,.25);
@@ -206,6 +213,7 @@ footer {
   .brand img { height: 52px; }
   .navlinks { justify-content: center; gap: 8px 13px; }
   .cards { grid-template-columns: 1fr; max-width: 460px; margin-inline: auto; }
+  .team .cards { grid-template-columns: 1fr; }
   .hero { min-height: 70vh; }
   section { padding: 58px 0; }
   .timer { gap: 6px; }
@@ -305,16 +313,8 @@ footer {
           <p>8238673567</p>
         </article>
         <article class="card">
-          <h3>Het Hadiyal</h3>
-          <p>8160156453</p>
-        </article>
-        <article class="card">
           <h3>Kartik Prajapati</h3>
           <p>9727500939</p>
-        </article>
-        <article class="card">
-          <h3>Vaibhav Kevlani</h3>
-          <p>9510958341</p>
         </article>
       </div>
     </div>
